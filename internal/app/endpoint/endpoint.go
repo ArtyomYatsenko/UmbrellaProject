@@ -26,7 +26,7 @@ func (e *Endpoint) Status(ctx echo.Context) error {
 	d := e.s.DaysLeft()
 	//Формируем строку ответа
 	s := fmt.Sprintf("Days left - %d", d)
-	//Отправляем строковый ответ, код состояни
+	//Отправляем строковый ответ, код состояния
 	err := ctx.String(http.StatusOK, s)
 	if err != nil {
 		log.Fatal(err)
